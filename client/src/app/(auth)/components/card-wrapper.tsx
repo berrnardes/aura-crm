@@ -7,7 +7,7 @@ import {
 import React from "react";
 import BackButton from "./back-button";
 import Header from "./header";
-import Providers from "./providers";
+import SocialProviders from "./social-providers";
 
 interface CardWrapperProps {
 	showProviders?: boolean;
@@ -34,7 +34,7 @@ const CardWrapper = ({
 			<CardContent className="w-full">{children}</CardContent>
 			{showProviders && (
 				<CardFooter className="w-full">
-					<Providers label={label} />
+					<SocialProviders label={label} />
 				</CardFooter>
 			)}
 			<CardFooter>

@@ -1,9 +1,10 @@
 import Providers from "@/components/providers";
+import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const monteserrat = Montserrat({
 	subsets: ["latin"],
 	weight: ["200", "400", "600", "800"],
 });
@@ -21,7 +22,10 @@ export default function RootLayout({
 	return (
 		<Providers>
 			<html lang="en">
-				<body className={poppins.className}>{children}</body>
+				<body className={monteserrat.className}>
+					{children}
+					<Toaster />
+				</body>
 			</html>
 		</Providers>
 	);

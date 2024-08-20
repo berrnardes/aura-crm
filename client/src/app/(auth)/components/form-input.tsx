@@ -31,7 +31,7 @@ const FormInput = ({
 					<FormControl>
 						<Input
 							type={type}
-							className="rounded-3xl bg-primary/5 border-none py-6 px-5 flex items-center font-medium justify-center"
+							className="rounded-3xl bg-primary/5 border-none py-6 px-5 flex items-center font-medium justify-center shadow-sm"
 							placeholder={placebholder}
 							{...field}
 						/>

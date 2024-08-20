@@ -31,7 +31,9 @@ const FormLogin = () => {
 					placebholder="*******"
 					type="password"
 				/>
-				<Button className="w-full rounded-3xl py-6 px-5">Login</Button>
+				<Button className="w-full shadow-lg rounded-3xl py-6 px-5">
+					Login
+				</Button>
 			</Form>
 		</form>
 	);

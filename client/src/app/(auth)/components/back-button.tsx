@@ -13,7 +13,7 @@ const BackButton = ({ href, label }: BackButton) => {
 			className={buttonVariants({
 				variant: "ghost",
 				size: "sm",
-				className: "font-semibold text-primary p-6",
+				className: "font-semibold text-orange-500 py-6 px-6",
 			})}
 		>
 			{label}
