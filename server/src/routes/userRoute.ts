@@ -1,7 +1,7 @@
 import express, { type Request, type Response } from "express";
 import { validate } from "../../lib/zod-middleware";
-import { login, register } from "../controllers/userController";
-import { userLoginSchema, userRegisterSchema } from "../schemas/user";
+import { register } from "../controllers/userController";
+import { userRegisterSchema } from "../schemas/user";
 
 const router = express.Router();
 
@@ -14,6 +14,6 @@ router.get(
 );
 
 router.post("/create", validate(userRegisterSchema), register);
-router.post("/login", validate(userLoginSchema), login);
+// router.post("/login", validate(userLoginSchema), login);
 
 export default router;

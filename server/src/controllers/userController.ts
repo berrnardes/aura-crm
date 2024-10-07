@@ -8,6 +8,8 @@ import user from "../db/schemas/user";
 export const register = async (req: Request, res: Response) => {
 	try {
 		const { name, password, email, phone } = req.body;
+		const quantity = 10;
+		const unitPrice = 10;
 
 		// Search in batabase by the email
 		const existingEmail = await db
@@ -31,7 +33,6 @@ export const register = async (req: Request, res: Response) => {
 			name,
 			password: hashedPassword,
 			email,
-			phone,
 		});
 
 		res.status(StatusCodes.ACCEPTED).json({ sucess: true, user: createdUser });

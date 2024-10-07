@@ -23,6 +23,7 @@ export const expenseSummary = pgTable("expense_summary", {
 		return uui();
 	}),
 	totalExpense: numeric("total_expense", { precision: 7, scale: 2 }).notNull(),
+	categoryId: varchar("category_id").references(() => expenseByCategory.id),
 });
 
 export const expenseByCategory = pgTable("expense_by_category", {

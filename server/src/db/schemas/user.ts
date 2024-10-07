@@ -9,6 +9,7 @@ const user = pgTable("user", {
 		}),
 	name: varchar("name", { length: 64 }).notNull(),
 	email: varchar("email", { length: 255 }).notNull().unique(),
+	password: varchar("password", { length: 255 }).notNull(),
 	createdAt: date("created_at", { mode: "string" }).defaultNow(),
 	updatedAt: date("updated_at", { mode: "string" }).defaultNow(),
 });

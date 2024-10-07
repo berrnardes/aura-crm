@@ -1,11 +1,9 @@
+import Sidebar from "@/components/sidebar";
 import MainContent from "./components/main-content";
-import Sidebar from "./components/sidebar";
-import SidebarMobile from "./components/sidebar-mobile";
 
 const Dashboard = () => {
 	return (
-		<div className="flex h-full">
-			<SidebarMobile />
+		<div className="flex h-full w-full bg-zinc-100 border-4 border-red-600">
 			<Sidebar />
 			<MainContent />
 		</div>
